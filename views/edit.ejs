@@ -1,0 +1,52 @@
+<%- include('./base/header.ejs') %>
+
+    <div class="container">
+        <div class="alert bg-success mt-3">
+            <h4 class="text-center">Update Record</h4>
+        </div>
+    </div>
+    
+    
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form action="/update/<%= records._id %>" method="POST">
+                    <div class="field my-3">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" value="<%= records.name %>"
+                            placeholder="Update name">
+                    </div>
+                    <div class="field my-3">
+                        <label for="" class="form-label">Post</label>
+                        <input type="text" class="form-control" name="post" value="<%= records.post %>"
+                            placeholder="Upadte post">
+                    </div>
+                    <div class="field my-3">
+                        <label for="" class="form-label">Joining Date</label>
+                        <input type="text" class="form-control" name="joining" value="<%= records.joining %>"
+                            placeholder="DD/MM/YYYY">
+                    </div>
+    
+                    
+    
+                    <div class="field my-3">
+                        <label for="" class="form-label">email</label>
+                        <input type="text" class="form-control" name="email" value="<%= records.email %>"
+                            placeholder="Update email">
+                    </div>
+    
+                    <div class="field my-3">
+                        <label for="" class="form-label">Contact</label>
+                        <input type="text" class="form-control" name="contact" value="<%= records.contact %>"
+                            placeholder="Update phone number">
+                    </div>
+    
+                    <input type="submit" value="Create" class="btn btn-warning w-100">
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <%- include('./base/footer.ejs') %>
